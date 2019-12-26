@@ -29,7 +29,7 @@ Namespace DataLayer
         Public Function GetData(Of T As Class)() As BindingList(Of T)
             Dim table = context.Set(Of T)()
             table.Load()
-            Return table.Local.ToBindingList(Of T)()
+            Return table.Local.ToBindingList()
         End Function
     End Class
 End Namespace
